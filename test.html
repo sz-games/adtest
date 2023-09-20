@@ -840,12 +840,11 @@ window.addEventListener("scroll", function() { // Add a scroll event listener
         settings
         
         </span>
-        <span id="NOTIF" onclick="doNOTE()" class="material-icons notranslate"  style=" cursor: pointer; z-index: 96; font-size: x-large; top: 15px; margin-right: 75px; right: 0; color: white;  position: absolute;">  
+        <span id="NOTIF" onclick="toggleSetings1()" class="material-icons notranslate"  style=" cursor: pointer; z-index: 96; font-size: x-large; top: 15px; margin-right: 75px; right: 0; color: white;  position: absolute;">  
      
           notifications
           
           </span>
-          <div class='onesignal-customlink-container'></div>
 
           <script>
 
@@ -1127,184 +1126,15 @@ setTimeout(() => {
 </script>
 
 <div id="SettingsOut" style="visibility: hidden; transition: 0.5s; user-select: none; z-index: 92; width: 100%; height: 100%; position: fixed;">
-  <style>
-    .OptionSet {
-      width: 95%; 
-      left: 50%;
-      cursor: pointer;
-       transform: translate(-50%, -0%) scale(1.0);
-        position: relative; 
-        height: 50px fit-content; 
-        padding: 15px 0px; 
-        background-color: #1d1d1da5;
-         border-radius: 15px;
-      transition: 0.5s;
-    }
-
-    .OptionSet:hover {
-      transform: translate(-50%, -0%) scale(1.03);
-    }
-  </style>
+  
 
   <div  style="transition: 0.5s; top: 50%; overflow-y: scroll; overflow-x: hidden; border-radius: 15px; left: 50%; transform: translate(-50%, -50%); padding: 5px 5px; z-index: 50; position: fixed; width: 50%; height: 45%; background-color: #333; border: solid 5px gray;" id="SettingsV2">
-    <div style="width: 100%; height: 50px; position: relative; background-color: #1d1d1dc9; left: 50%; transform: translate(-50%, -0%); border-radius: 15px;">
-      <h4 style="transform: translate(-0%, -50%); color: white; font-size: larger; left: 15px; top: 50%; position: absolute;">Settings</h4>
-      <h4 onclick="toggleSetings1()" style="cursor: pointer; transform: translate(-0%, -50%); color: white; font-size: larger; right: 15px; top: 50%; position: absolute;">Close</h4>
-
-    </div>
-    <br>
-    <br>
-
-    <div style="" onclick="toggleOptionSet('PageClose')" class="OptionSet">
-      <p style="color: white; word-wrap: break-word; width: 55%;  top: 50%; left: 15px; position: relative; " >Prevent Page Close</p>
-      <p id="Op1-Stat" style="transition: 0.5s; word-wrap: break-word; color: white; top: 50%; right: 15px; position: absolute; transform: translate(-0%, -50%);" >Off</p>
-
-    </div>
-    <br>
-    <div style="" class="OptionSet">
-      <p style="word-wrap: break-word; width: 55%; color: white; top: 50%; left: 15px; position: relative; " >Hide Page (Will Disguise All Pages As Google) </p>
-      <p id="Op2-Stat" style="transition: 0.5s; word-wrap: break-word; color: white; top: 50%; right: 15px; position: absolute; transform: translate(-0%, -50%);" >(Coming Soon)</p>
-
-    </div>
-
-   
-
-    <!--PageScript1-->
-    <script id="CHECK">
-          function getCookie2(name) {
-        const cookieName = name + "=";
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            let cookie = cookies[i];
-            while (cookie.charAt(0) === ' ') {
-                cookie = cookie.substring(1);
-            }
-            if (cookie.indexOf(cookieName) === 0) {
-                return cookie.substring(cookieName.length, cookie.length);
-            }
-        }
-        return '';
-    }
- 
     
-    let Setting14bu = getCookie2("PagePrevent");
+   <button onclick="toggleSetings1()" style="cursor: pointer; position: relative; width: 80%; bottom: 10px; color: white; height: 40px; border-radius: 0px 0px 15px 15px; transform: translate(-50%, -0%); left: 50%; background-color: #2f2f2f; border: solid 3px gray;">
+    Close
+   </button>
+    <div class='onesignal-customlink-container'></div>
 
-    function checkPageClose(event) {
-      
-        
-            event.returnValue = "Prevent Page Close Is Active, You Can Click Off Of This";
-      
-       
-     
-    }
-    function checkPageClose2() {
-        if(Setting14bu==="true") {
-        
-            window.onbeforeunload = function(event) {
-                // return a string to prevent the page from closing
-                event.preventDefault();
-                return "Prevent Page Close Is Active, You Can Click Off Of This";
-            };
-            window.addEventListener("beforeunload", checkPageClose);
-
-        } 
-        if(Setting14bu==="false") {
-        
-        }
-    }
-    console.log('CookiePAGE Value: ' + Setting14bu + "SzGames-Scripts Loaded")
-    checkPageClose2()
-
-    </script>
-    <!--PageScript1-->
-
-
-    <script>
-
-      function getCookie(name) {
-          const cookieName = name + "=";
-          const cookies = document.cookie.split(';');
-          for (let i = 0; i < cookies.length; i++) {
-              let cookie = cookies[i];
-              while (cookie.charAt(0) === ' ') {
-                  cookie = cookie.substring(1);
-              }
-              if (cookie.indexOf(cookieName) === 0) {
-                  return cookie.substring(cookieName.length, cookie.length);
-              }
-          }
-          return '';
-      }
-
-      // Usage
-   
-
-
-      function setCookie(name, value, years) {
-          const expirationDate = new Date();
-          expirationDate.setFullYear(expirationDate.getFullYear() + years);
-          const expires = "expires=" + expirationDate.toUTCString();
-          document.cookie = name + "=" + value + ";" + expires + ";path=/";
-      }
-
-
-
-      var option1bx = document.getElementById('Op1-Stat')
-      var option2bx = document.getElementById('Op2-Stat')
-      let Setting14b = getCookie("PagePrevent");
-
-      function toggleOptionSet(name) {
-
-        if(name==="PageClose") {
-          if(Setting14b==='false' || Setting14b==="") {
-            Setting14b = getCookie("PagePrevent")
-            setCookie("PagePrevent", 'true', 10); // Set the cookie to expire in 10 years
-
-            //console.log('PagePrevent True')
-
-            //const cookieValue45 = getCookie("PagePrevent");
-            // console.log(cookieValue45); // Print the cookie value to the console
-          }
-          if(Setting14b==='true') {
-            Setting14b = getCookie("PagePrevent")
-
-            setCookie("PagePrevent", 'false', 10); // Set the cookie to expire in 10 years
-            //console.log('PagePrevent False')
-            //const cookieValue45 = getCookie("PagePrevent");
-
-            // console.log(Setting14b); // Print the cookie value to the console
-          }
-        }
-       // console.log('Code: 89B')
-       CheckSettngs1B()
-
-
-      }
-      function CheckSettngs1B() {
-        Setting14b = getCookie("PagePrevent")
-        if(Setting14b==="true") {
-          option1bx.style.opacity = 0
-          setTimeout(() => {
-            option1bx.innerHTML = "Active"
-            option1bx.style.opacity = 1
-          }, 500);
-          //NoteLOCK()
-          
-        } 
-        if(Setting14b==="false") {
-          option1bx.style.opacity = 0
-          setTimeout(() => {
-            option1bx.innerHTML = "Not Active"
-            option1bx.style.opacity = 1
-          }, 500);
-        }
-        console.log('CookiePAGE Value: ' + Setting14b)
-      }
-
-      CheckSettngs1B()
-
-   
-    </script>
 
   </div>
 </div>
