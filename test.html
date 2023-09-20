@@ -74,7 +74,7 @@
 
            safari_web_id: "web.onesignal.auto.54d60a3d-c0d7-4ae1-b490-c29a9cfa7b70",
            notifyButton: {
-             enable: true,
+             enable: false,
            },
            promptOptions: {
               customlink: {
@@ -82,8 +82,8 @@
                 style: "button", /* Has value of 'button' or 'link' */
                 size: "medium", /* One of 'small', 'medium', or 'large' */
                 color: {
-                  button: '#E12D30', /* Color of the button background if style = "button" */
-                  text: '#FFFFFF', /* Color of the prompt's text */
+                  button: 'grey', /* Color of the button background if style = "button" */
+                  text: 'white', /* Color of the prompt's text */
                 },
                 text: {
                   subscribe: "Subscribe to push notifications", /* Prompt's text when not subscribed */
@@ -1133,7 +1133,7 @@ setTimeout(() => {
    <button onclick="toggleSetings1()" style="cursor: pointer; position: relative; width: 80%; bottom: 10px; color: white; height: 40px; border-radius: 0px 0px 15px 15px; transform: translate(-50%, -0%); left: 50%; background-color: #2f2f2f; border: solid 3px gray;">
     Close
    </button>
-    <div class='onesignal-customlink-container'></div>
+    <div style="left: 50%; transform: translate(-50%, 0%); position: relative;" class='onesignal-customlink-container'></div>
 
 
   </div>
