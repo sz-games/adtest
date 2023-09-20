@@ -4,21 +4,36 @@
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1654900800235927"
   crossorigin="anonymous"></script>
+  <style>
+    @keyframes ADCLOSE {
+      from{position: fixed; display: inline-block; bottom: 5px; background-color: gray; height: 70px  !important;  border-radius: 15px; width: 60%; left: 50%; transform: translate(-50%); display: block; z-index: 80}
+      to {position: fixed;  bottom: -30px; background-color: gray; height: 70px  !important; border-radius: 0px; width: 0%; opacity: 0; left: 50%; transform: translate(-50%); display: block; z-index: 80}
+    }
+  </style>
   <ins class="adsbygoogle"
   id="ad-container"
-  style="position: fixed; display: inline-block; bottom: 5px; background-color: gray; height: 70px  !important; border-radius: 15px; width: 60%; left: 50%; transform: translate(-50%); display: block; z-index: 80"
+  style="position: fixed; transition: 0.8s; display: inline-block; bottom: 5px; background-color: gray; height: 70px  !important; border-radius: 15px; width: 60%; left: 50%; transform: translate(-50%); display: block; z-index: 80"
   data-ad-client="ca-pub-1654900800235927"
   data-ad-slot="6959226874"
 
-     ></ins>
+     >  <span onclick="adclose()"  class="material-icons notranslate"  style=" cursor: pointer;  font-size: 20px; float: right; right: 5px; top: 5px;  color: white;  position: relative;">  
+      close
+  </span>
+  <script>
+    function adclose() {
+        document.getElementById('ad-container').style.animation = 'ADCLOSE 0.8s'
+        setTimeout(() => {
+          document.getElementById('ad-container').style.display = 'none'
+        }, 800);
+
+    }
+  </script>
+</ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <style>
-ins {
-  position: relative; /* Ensure the element is positioned */
-  left: 5px; /* Adjust this value as needed to move it to the left */
-}
+
   </style>
   
 <!-- Google Tag Manager -->
