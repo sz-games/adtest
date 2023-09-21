@@ -6,6 +6,11 @@
   <!--ADCODE-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1654900800235927"
   crossorigin="anonymous"></script>
+  <script>
+    function LOADADS() {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+</script>
   <style>
     @keyframes ADCLOSE {
       from{position: fixed; display: inline-block; bottom: 5px; background-color: gray; height: 70px  !important;  border-radius: 15px; width: 60%; left: 50%; transform: translate(-50%); display: block; z-index: 80}
@@ -4393,6 +4398,7 @@ function adshow(event) {
 
     }
   }
+  LOADADS();
   // Put your code here to execute before navigating to the new link
   // For example, you can show a confirmation dialog
   
@@ -4402,9 +4408,7 @@ function adshow(event) {
   // If the user confirms, navigate to the new link
 
   link2 = event.currentTarget
-  <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+
 }
 
 // Function to navigate to a link
