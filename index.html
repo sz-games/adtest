@@ -1190,7 +1190,7 @@ setTimeout(() => {
 
 
 
-<div id="ADSHOW" style="z-index: 80; background-color: #2f2f2f; position: fixed; display: none; width: 100%; height: 100%;">
+<div id="ADSHOW" style="z-index: 70; background-color: #2f2f2f; position: fixed; display: none; width: 100%; height: 100%;">
   <span  id="ADCLOSE2" onclick=""  class="material-icons notranslate"  style="background-color: #1d1d1dcf; padding: 2px; border-radius: 15px; z-index: 30; cursor: pointer;  font-size: 20px; float: right; right: 5px; top: 5px;  color: white;  position: absolute;">  
     close
 </span>
@@ -4408,6 +4408,7 @@ function adshow(event) {
   // If the user confirms, navigate to the new link
 
   link2 = event.currentTarget
+  document.getElementById('ADSHOW').style.height = '100%'
 
 }
 
