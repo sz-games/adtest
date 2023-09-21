@@ -4368,7 +4368,7 @@ function adshow(event) {
   // Prevent the default navigation behavior
   event.preventDefault();
   if(dataAD){
-    if(dataAD === 2) {
+    if(dataAD > 2) {
 
       localStorage.setItem('ADTIMES', 0)
       window.location = event.currentTarget
@@ -4382,7 +4382,7 @@ function adshow(event) {
     localStorage.setItem('ADTIMES', 0)
     dataAD = localStorage.getItem('ADTIMES')
 
-    if(dataAD === 2) {
+    if(dataAD > 2) {
 
       localStorage.setItem('ADTIMES', 0)
       window.location = event.currentTarget
